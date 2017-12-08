@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_a)
         Log.e(TAG, "onCreate:")
 
-      
+
     }
 
     override fun onRestart() {
