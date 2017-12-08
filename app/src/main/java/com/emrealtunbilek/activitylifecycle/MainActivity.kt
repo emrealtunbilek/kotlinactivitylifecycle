@@ -1,5 +1,7 @@
 package com.emrealtunbilek.activitylifecycle
 
+//Activity Life Cycle örnek
+
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
