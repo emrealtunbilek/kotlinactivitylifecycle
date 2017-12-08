@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">ActivityLifeCycle</string>
+    <string name="app_name">Activity LifeCycle</string>
+    <string name="hint">Giriş</string>
+    <string name="hello_b">Merhaba, ben Activity B</string>
+    <string name="hello_c">Dialog Penceresi</string>
+    <string name="hello_a">Merhaba, ben Activity A</string>
+    <string name="initial_value">1</string>
 </resources>
