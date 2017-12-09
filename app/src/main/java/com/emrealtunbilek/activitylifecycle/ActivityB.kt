@@ -11,12 +11,12 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 class ActivityB : AppCompatActivity() {
 
-    val TAG = "EMRE"
+    val TAG = "EMRE actıvıty b"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_b)
-        Log.d(TAG, "onCreate:")
+        Log.e(TAG, "onCreate:")
 
     }
 }

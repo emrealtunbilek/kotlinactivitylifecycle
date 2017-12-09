@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityB"></activity>
-        <activity android:name=".ActivityC"></activity>
+        <activity android:name=".ActivityC" android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>

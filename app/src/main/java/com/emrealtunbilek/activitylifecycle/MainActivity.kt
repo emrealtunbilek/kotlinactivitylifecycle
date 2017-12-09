@@ -18,12 +18,18 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val TAG = "EMRE"
+    val TAG = "EMRE ACTIVITY A"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_a)
+        setContentView(R.layout.activity_main)
         Log.e(TAG, "onCreate:")
+
+
+        if (savedInstanceState != null){
+            val deger= savedInstanceState?.getString("anahtar")
+            input.text = deger
+        }
 
 
     }
@@ -44,20 +50,19 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     override fun onPause() {
         super.onPause()
-        Log.d(TAG, "onPause: ")
+        Log.e(TAG, "onPause: ")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d(TAG, "onStop: ")
+        Log.e(TAG, "onStop: ")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "onDestroy: ")
+        Log.e(TAG, "onDestroy: ")
     }
 
     fun launchActivity(view: View) {
@@ -65,7 +70,25 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        Log.e(TAG, "ONSAVEINSTANCESTATE TETIKLENDI ")
+
+        outState?.putString("anahtar", input.text.toString())
+    }
+
+   /* override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.e(TAG, "onRestoreInstanceState TETIKLENDI ")
+
+    }*/
+
     fun launchDialog(view: View) {
+
+       /* val intent = Intent(this, ActivityC::class.java)
+        startActivity(intent)*/
+
+       //launchDialogAlert()
         launchDialogFragment()
     }
 
